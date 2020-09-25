@@ -17,5 +17,13 @@ class Waiter
   def new_meal(customer, total, tip=0)
     Meal.new(self, customer, total, tip)      #referring to meal class
   end
+  
+  def meals
+    Meal.all.select do |meal|         #waiter gets all meals they have served
+      meal.waiter == self             
+    end
+  end
 
+
+  
 end
