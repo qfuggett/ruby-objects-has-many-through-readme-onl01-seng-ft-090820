@@ -25,4 +25,10 @@ class Customer
     end
   end
   
+  def waiters
+    meals.map do |meal|   #returns a list of all waiters Rachel has interacted with for every meal
+      meal.waiter
+    end
+  end
+  
 end
