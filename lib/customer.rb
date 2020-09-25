@@ -18,8 +18,10 @@ class Customer
   end
   
   def meals
-    Meal.all.select do |meal|
-      meal.customer == self
+    Meal.all.select do |meal|       
+      #iterating through every instance of meal and returning ones where meal.customer atches the current instance
+      meal.customer == self         
+      #customer looks at all meals and select those that belong to them
     end
   end
   
